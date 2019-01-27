@@ -39,6 +39,12 @@ int wmain(int argc, wchar_t **argv)
 	memset(&si, 0, sizeof(si));
 	si.cb = sizeof(STARTUPINFO);
 
+	if (*cmdlinew == 0)
+	{
+		wprintf(L"RunSuspended - Copyright (c) 2019, Christien Rioux\n\nUsage: RunSuspended <command line of program to run>\n");
+		exit(0);
+	}
+
 	wprintf(L"Starting process suspended: %s\n", cmdlinew);
 
 	BOOL ok = CreateProcessW(NULL, cmdlinew, NULL, NULL, FALSE, CREATE_SUSPENDED, NULL, NULL, &si, &pi);
