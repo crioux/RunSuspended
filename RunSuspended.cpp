@@ -41,7 +41,7 @@ int wmain(int argc, wchar_t **argv)
 
 	if (*cmdlinew == 0)
 	{
-		wprintf(L"RunSuspended - Copyright (c) 2019, Christien Rioux\n\nUsage: RunSuspended <command line of program to run>\n");
+		wprintf(L"RunSuspended v1.0 - Copyright (c) 2019, Christien Rioux\n\nUsage: RunSuspended <command line of program to run>\n");
 		exit(0);
 	}
 
